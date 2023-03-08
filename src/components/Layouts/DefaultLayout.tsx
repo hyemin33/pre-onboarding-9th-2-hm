@@ -4,21 +4,16 @@ import { Outlet } from "react-router-dom";
 const DefaultLayout = () => {
   return (
     <Grid
-      templateAreas={`"header""main""footer"`}
-      gridTemplateRows={"90px 1fr 90px"}
+      templateAreas={`"header""main"`}
+      gridTemplateRows={"90px 1fr"}
       h="100vh"
-      gap="1"
-      color="#fff"
       fontWeight="bold"
     >
       <GridItem bg="#789bfb" area={"header"}>
         라이크어로컬
       </GridItem>
-      <GridItem bg="#fff" area={"main"}>
+      <GridItem area={"main"} w="100%" padding="50px">
         <Outlet />
-      </GridItem>
-      <GridItem bg="#0c0608eb" area={"footer"}>
-        (주) 라이크어로컬
       </GridItem>
     </Grid>
   );
