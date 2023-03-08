@@ -12,7 +12,8 @@ import React from "react";
 import ModalComponent from "../../components/Modal";
 
 const MainPage = () => {
-  const [filter, setFilter] = useState("price");
+  const [priceFilter, setPriceFilter] = useState(1000);
+  const [spaceFilter, setSpaceFilter] = useState("seoul");
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef(null);
@@ -21,12 +22,26 @@ const MainPage = () => {
     <Box>
       <Box align="right" height="80px">
         <Select
-          placeholder="필터를 선택해주세요"
+          placeholder="가격을 선택해주세요"
           w="200px"
-          defaultValue={filter}
+          defaultValue={priceFilter}
         >
-          <option value="price">가격</option>
-          <option value="spaceCategory">공간</option>
+          {[1000, 2000, 3000].map((item) => (
+            <option value={item} key={item}>
+              {item}
+            </option>
+          ))}
+        </Select>
+        <Select
+          placeholder="공간을 선택해주세요"
+          w="200px"
+          defaultValue={spaceFilter}
+        >
+          {["서울", "부산", "대구"].map((item) => (
+            <option value={item} key={item}>
+              {item}
+            </option>
+          ))}
         </Select>
       </Box>
       <SimpleGrid columns={4} spacing={8}>
