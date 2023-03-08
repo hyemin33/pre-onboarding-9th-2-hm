@@ -6,6 +6,6 @@ const NotFoundPage = () => {
   useEffect(() => {
     navigate("/main");
   }, []);
-  return <div>Not Found</div>;
+  return <div>!</div>;
 };
 export default NotFoundPage;

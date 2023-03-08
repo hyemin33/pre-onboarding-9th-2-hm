@@ -1,5 +1,15 @@
+import { Global } from "@emotion/react";
+
+import { globalStyles } from "./commons/styles/globalStyles";
+import AppRouter from "./components/commons/routes/AppRouter";
+
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <Global styles={globalStyles} />
+      <AppRouter />
+    </>
+  );
 }
 
 export default App;
