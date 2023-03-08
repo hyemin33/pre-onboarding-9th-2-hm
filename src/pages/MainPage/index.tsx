@@ -20,7 +20,7 @@ const MainPage = () => {
 
   return (
     <Box>
-      <Box align="right" height="80px">
+      <Box height="80px">
         <Select
           placeholder="가격을 선택해주세요"
           w="200px"
