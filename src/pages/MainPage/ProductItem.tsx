@@ -2,7 +2,7 @@ import { Badge, Image, Box, ButtonGroup, Button } from "@chakra-ui/react";
 
 import { IProductProps } from "../../types";
 
-const ProductItem = ({ item }: IProductProps) => {
+const ProductItem = ({ item, detailButton }: any) => {
   return (
     <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
       <Image src={item.mainImage} alt={item.mainImage} object-fit={true} />
@@ -37,6 +37,7 @@ const ProductItem = ({ item }: IProductProps) => {
           <Button variant="solid" colorScheme="blue">
             예약
           </Button>
+          {detailButton}
         </ButtonGroup>
       </Box>
     </Box>
