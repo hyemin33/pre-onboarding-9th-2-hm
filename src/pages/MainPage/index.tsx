@@ -49,18 +49,13 @@ const MainPage = () => {
           <ProductItem
             key={`product` + i}
             item={item}
-            detailButton={
-              <Button ref={btnRef} onClick={onOpen}>
-                자세히보기
-              </Button>
-            }
+            detailButton={<Button onClick={onOpen}>자세히보기</Button>}
           />
         ))}
       </SimpleGrid>
       <ModalComponent
         item={mockData[0]}
         onClose={onClose}
-        finalFocusRef={btnRef}
         isOpen={isOpen}
         scrollBehavior="inside"
       />
